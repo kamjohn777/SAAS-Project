@@ -593,30 +593,23 @@
     </div>
 
     <script>
-      const nav = document.getElementById("navBar");
-      window.onscroll - function() {
-        if (window.pageXOffset > 400) {
-          nav.classList.add("sticky");
-        } else {
-          nav.classList.remove("sticky");
-        }
-      };
 
-      const navButton = document.querySelector('button[aria-expanded]');
-      // const spanBurger = document.querySelector("material-symbols-outlined");
+const navButton = document.querySelector('.navbar-toggler');
+const navItems = document.querySelector('#navBar ul');
 
-      function toggleNav({ target }) {
-        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-        navButton.setAttribute('aria-expanded', !expanded);
+navButton.addEventListener('click', () => {
+  const expanded = navButton.getAttribute('aria-expanded') === 'true';
+  navButton.setAttribute('aria-expanded', !expanded);
+  navItems.classList.toggle('active');
+});
 
-        // if (expanded === true) {
-        //   document.querySelector('material-symbols-outlined') === span.classList.add("hidden-span");
-        // } else {
-        //   false
-        // }
-      }
-  
-      navButton.addEventListener('click', toggleNav);
+window.onscroll = function() {
+  if (window.pageYOffset > 400) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};
 
       // function hiddenSpan({ target }) {
         

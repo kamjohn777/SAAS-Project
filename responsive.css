@@ -1034,10 +1034,60 @@ padding: 3px;
 
 .mfdcahr-div-1 :nth-child(3) {color: #2a7cff;}
 
-.navbar-toggler {
+/* .navbar-toggler {
   background: transparent;
   border: none;
-}
+} */
+
+/* #navBar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: red;
+  width: 100%;
+} */
+
+/* .logo {
+margin: 0;
+} */
+
+
+  /* #navBar ul {
+    display: none;
+  }
+
+  #navBar ul.active {
+    display: block;
+  } */
+
+  .navbar-toggler {
+    position: relative;
+    z-index: 101;
+    border: none;
+  }
+
+   ul.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-left: 0;
+  }
+
+  
+
+
+
+
+
+
 
   [aria-controls="navbarDropdown"] {
     display: block;
@@ -1048,7 +1098,7 @@ padding: 3px;
   }
   
   [aria-expanded="true"] ~ ul {
-    display: block;
+    /* display: block; */
   }
 
   .hidden-span {
